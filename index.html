@@ -4,16 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>VMS</title>
- <style>
+ <!-- <style>
     #pictureUrl { display: block; margin: 0 auto }
-  </style>
+  </style>--> 
 </head>
 <body>
-  <img id="pictureUrl" width="25%">
   <p id="userId"></p>
+  <!--<img id="pictureUrl" width="25%">
+  
   <p id="displayName"></p>
   <p id="statusMessage"></p>
-  <!--<p id="edit"></p>
+  <p id="edit"></p>
   <p id="getDecodedIDToken"></p>
   <p id="scanCode"></p>
   <p>
@@ -24,21 +25,22 @@
   <script>
     function runApp() {
       liff.getProfile().then(profile => {
-        document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("userId").innerHTML = '<b>LineuserID:</b> ' + profile.userId;
-        //var user_id = profile.userId;
-        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
-        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
+        //document.getElementById("pictureUrl").src = profile.pictureUrl;
+        //document.getElementById("userId").innerHTML = '<b>LineuserID:</b> ' + profile.userId;
+        var user_id = profile.userId;
+        //document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
+        //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("edit").innerHTML = '<b>Test Edit </b>';
-        //var text = {"line_id" : user_id };
-        //var js_text = JSON.stringify(text);
-      //axios.post('https://vms-api.thssoft.com/api/v1/line-callback',{"line_id" : user_id })
-    //   .then(function (response) {
-    //   // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
-    //   resp(response.data.url)
-    //   })
-    //   .catch(function (error) {
-    //   });
+        var text = {"line_id" : user_id };
+        var js_text = JSON.stringify(text);
+      axios.post('https://vms-api.thssoft.com/api/v1/line-callback',{"line_id" : user_id })
+      .then(function (response) {
+      // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
+      //gitup
+      resp(response.data.url)
+      })
+      .catch(function (error) {
+      });
       }).catch(err => console.error(err));
     
     }
@@ -47,7 +49,7 @@
       window.location.replace(get_url)
     }
 
-    liff.init({ liffId: "1654398548-PA9nBeo3" }, () => {
+    liff.init({ liffId: "1654398548-YQrVJOpv" }, () => {
       if (liff.isLoggedIn()) {
         runApp()
       } else {
