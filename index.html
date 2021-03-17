@@ -26,15 +26,16 @@
     function runApp() {
       liff.getProfile().then(profile => {
         //document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("userId").innerHTML = '<b>LineuserID:</b> ' + profile.userId;
+        //document.getElementById("userId").innerHTML = '<b>LineuserID:</b> ' + profile.userId;
         var user_id = profile.userId;
         //document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("edit").innerHTML = '<b>Test Edit </b>';
-        var text = {"line_id" : user_id };
-        var js_text = JSON.stringify(text);
+        //var text = {"line_id" : user_id };
+        //var js_text = JSON.stringify(text);
       ///axios.post('https://dc97ec192036.ngrok.io/test',{"line_id" : user_id })
       .then(function (response) {
+        document.getElementById("userId").innerHTML = '<b>LineuserID:</b> ' + profile.userId;
       // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
       //gitup
       //resp(response.data.url)
