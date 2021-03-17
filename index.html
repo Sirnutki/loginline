@@ -13,16 +13,18 @@
   <p id="displayName"></p>
   <p id="statusMessage"></p>
   <p id="getDecodedIDToken"></p>
-  <script src="https://static.line-scdn.net/liff/edge/versions/2.7.1/sdk.js"></script>
+  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     function runApp() {
       liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;
         document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
-        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
-        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
-        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+        var user_id = profile.userId;
+        //document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
+        //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
+        //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+        var text = {"line_id" : user_id };
         axios.post('https://dc97ec192036.ngrok.io/test',{"line_id" : user_id })
       }).catch(err => console.error(err));
     }
