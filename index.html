@@ -26,8 +26,17 @@
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         var text = {"line_id" : user_id };
         axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
-        axios.get('https://65f73638b28a.ngrok.io/info')
+        
+      .then(function(response){
+       resp(response.data.url)
+       })
+      .catch(function (error) {
+      });
       }).catch(err => console.error(err));
+    }
+    
+      function resp(get_url){
+      window.location.replace(https://developers.line.biz/en/docs/messaging-api/using-flex-messages/#sending-hello-world)
     }
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
       if (liff.isLoggedIn()) {
