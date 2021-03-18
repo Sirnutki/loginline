@@ -26,6 +26,7 @@
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         var text = {"line_id" : user_id };
         axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
+        axios.get('https://65f73638b28a.ngrok.io/info')
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
