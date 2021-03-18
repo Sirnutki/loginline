@@ -26,17 +26,19 @@
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         var text = {"line_id" : user_id };
         axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
-        
-      .then(function(response){
-       document.getElementById("edit").innerHTML = JSON.stringify(response.data);
-       resp(response.data)
-       })
+      .then(function (response) {
+      // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
+      //gitup
+      resp(response.data.url)
+      })
       .catch(function (error) {
       });
       }).catch(err => console.error(err));
-    }
     
-      function resp(get_url){
+    }
+
+    
+      function resp(){
       window.location.replace('https://developers.line.biz/en/docs/messaging-api/using-flex-messages/#sending-hello-world')
     }
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
