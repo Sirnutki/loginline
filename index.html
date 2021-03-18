@@ -25,7 +25,7 @@
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         var text = {"line_id" : user_id };
-        axios.post('https://dc97ec192036.ngrok.io/test',{"line_id" : user_id })
+        axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
