@@ -28,7 +28,8 @@
         axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
         
       .then(function(response){
-       resp(response)
+       document.getElementById("edit").innerHTML = JSON.stringify(response.data);
+       resp(response.data)
        })
       .catch(function (error) {
       });
