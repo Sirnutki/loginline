@@ -25,9 +25,9 @@
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         var text = {"line_id" : user_id };
-        axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
+        //axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
       .then(function (response) {
-      // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
+      document.getElementById("edit").innerHTML = response;
       //gitup
       resp(response)
       })
