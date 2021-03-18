@@ -25,20 +25,21 @@
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         var text = {"line_id" : user_id };
-      axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
-      .then(function (response) {
-      document.getElementById("edit").innerHTML = user_id;
-      //gitup
+    //   axios.post('https://65f73638b28a.ngrok.io/user_id',{"line_id" : user_id })
+    //   .then(function (response) {
+      
+    //   //gitup
+    //   resp()
+    //   })
+    //   .catch(function (error) {
+    //   });
       resp()
-      })
-      .catch(function (error) {
-      });
       }).catch(err => console.error(err));
     
     }
 
     
-      function resp(get_url){
+      function resp(){
       window.location.replace('www.google.com')
     }
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
