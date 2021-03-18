@@ -18,8 +18,8 @@
   <script>
     function runApp() {
       liff.getProfile().then(profile => {
-        document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+        //document.getElementById("pictureUrl").src = profile.pictureUrl;
+        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         var user_id = profile.userId;
         //document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
@@ -29,7 +29,7 @@
       .then(function (response) {
       // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
       //gitup
-      resp(response)
+      resp()
       })
       .catch(function (error) {
       });
