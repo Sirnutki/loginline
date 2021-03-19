@@ -25,11 +25,11 @@
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         //var text = {"line_id" : user_id };   
-        resp();
+        
         
         axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
-
+        resp();
       
       })
       .catch(function (error) {
