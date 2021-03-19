@@ -26,31 +26,23 @@
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         //var text = {"line_id" : user_id };   
         resp();
-        userid();
-      //   axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
-      //   .then(function (response) {
+        
+        axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
+        .then(function (response) {
 
       
-      // })
-      // .catch(function (error) {
+      })
+      .catch(function (error) {
 
-      // });
+      });
       
       }).catch(err => console.error(err));
     
     }
 
-      function userid(){
-      axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
-      .then(function (response) {
-        console.log(response);
-      
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-      
-      }
+
+
+
       function resp(){     
       window.location.replace('https://b1eb133d7ebe.ngrok.io/Register')
 
