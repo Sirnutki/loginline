@@ -29,10 +29,7 @@
       
       }).catch(err => console.error(err));
       resp();
-    }
-
-      function userid(){
-        axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
+      axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
           document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
           console.log(response);
@@ -40,7 +37,8 @@
       .catch(function (error) {
         console.log(error);
       });
-      }
+    }
+
 
 
       function resp(){     
