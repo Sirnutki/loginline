@@ -29,11 +29,11 @@
         
         axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
-        resp();
-      
+        //resp();
+       console.log(response);
       })
       .catch(function (error) {
-
+      console.log(error);
       });
       
       }).catch(err => console.error(err));
