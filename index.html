@@ -31,9 +31,10 @@
       // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
       //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
       //gitup
-        resp();
+        
       })
       .catch(function (error) {
+          resp();
         //document.getElementById("userId").innerHTML = '<b>Fail:</b> ' + profile.userId;
       });
       }).catch(err => console.error(err));
