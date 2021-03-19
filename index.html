@@ -28,11 +28,11 @@
         axios.post('https://1e92fbc31f67.ngrok.io/user_id_line',{"line_id" : user_id })
         
         .then(function (response) {
-        
+        resp()
        //gitup
        
        }).catch(function (error) {
-       
+       resp('https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-512.png')
        });
        
       }).catch(err => console.error(err));
