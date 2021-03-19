@@ -26,15 +26,14 @@
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         var text = {"line_id" : user_id };   
         axios.post('https://1e92fbc31f67.ngrok.io/user_id_line',{"line_id" : user_id })
-        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         .then(function (response) {
       // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
-      document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+      //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
       //gitup
-      //resp()
+      resp();
       })
       .catch(function (error) {
-        document.getElementById("userId").innerHTML = '<b>Fail:</b> ' + profile.userId;
+        //document.getElementById("userId").innerHTML = '<b>Fail:</b> ' + profile.userId;
       });
       }).catch(err => console.error(err));
     
