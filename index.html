@@ -26,7 +26,14 @@
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         //var text = {"line_id" : user_id };   
         //resp();
-        
+        userid();
+
+      
+      }).catch(err => console.error(err));
+    
+    }
+
+      function userid(){
         axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
           document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
@@ -35,12 +42,7 @@
       .catch(function (error) {
         console.log(error);
       });
-      
-      }).catch(err => console.error(err));
-    
-    }
-
-
+      }
 
 
       function resp(){     
