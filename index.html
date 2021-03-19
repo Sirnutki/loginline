@@ -25,7 +25,15 @@
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         var text = {"line_id" : user_id };   
-        axios.post('https://1e92fbc31f67.ngrok.io/user_id_line',{"line_id" : user_id })
+
+      }).catch(err => console.error(err));
+    
+    }
+
+    
+      function resp(){     
+      window.location.replace('https://1e92fbc31f67.ngrok.io/Register')
+      axios.post('https://1e92fbc31f67.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
       // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
       //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
@@ -35,13 +43,6 @@
       .catch(function (error) {
         //document.getElementById("userId").innerHTML = '<b>Fail:</b> ' + profile.userId;
       });
-      }).catch(err => console.error(err));
-    
-    }
-
-    
-      function resp(){     
-      window.location.replace('https://1e92fbc31f67.ngrok.io/Register')
     }
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
       if (liff.isLoggedIn()) {
