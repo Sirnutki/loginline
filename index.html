@@ -24,7 +24,7 @@
         //document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
-        var text = {"line_id" : user_id };   
+        //var text = {"line_id" : user_id };   
         resp();
       }).catch(err => console.error(err));
     
@@ -37,12 +37,12 @@
         .then(function (response) {
       // document.getElementById("edit").innerHTML = JSON.stringify(response.data.url);
       //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
-      //gitup
-      
+      window.location.replace('https://www.google.co.th/webhp?hl=th&sa=X&ved=0ahUKEwjh7ob0uLvvAhVGwTgGHTZlDyQQPAgI')
       })
       .catch(function (error) {
         //document.getElementById("userId").innerHTML = '<b>Fail:</b> ' + profile.userId;
       });
+
     }
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
       if (liff.isLoggedIn()) {
