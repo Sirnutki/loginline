@@ -25,18 +25,19 @@
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         //var text = {"line_id" : user_id };   
-
-      
-      }).catch(err => console.error(err));
-      resp();
-      axios.post('https://2b6e64207092.ngrok.io/user_id_line',{"line_id" : user_id })
+        axios.post('https://2b6e64207092.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
-          document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
-          console.log(response);
+         resp();
+        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+          //console.log(response);
       })
       .catch(function (error) {
-        console.log(error);
+        //console.log(error);
       });
+      
+      }).catch(err => console.error(err));
+      
+
     }
 
 
