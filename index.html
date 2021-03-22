@@ -29,7 +29,7 @@
       
       }).catch(err => console.error(err));
       resp();
-      axios.post('https://b1eb133d7ebe.ngrok.io/user_id_line',{"line_id" : user_id })
+      axios.post('https://2b6e64207092.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
           document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
           console.log(response);
@@ -42,7 +42,7 @@
 
 
       function resp(){     
-      window.location.replace('https://b1eb133d7ebe.ngrok.io/Register')
+      window.location.replace('https://2b6e64207092.ngrok.io/Register')
 
     }
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
