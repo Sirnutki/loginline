@@ -35,7 +35,7 @@
     function user_id() {
         liff.getProfile().then(profile => {
         var user_id_line = profile.userId;
-        axios.post('https://8c34790a4315.ngrok.io/user_id_line',{"line_id" : user_id_line })
+        axios.post('https://36a4bd480251.ngrok.io/user_id_line',{"line_id" : user_id_line })
         .then(function (response) {
         resp();
         //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
@@ -55,7 +55,7 @@
 
 
       function resp(){     
-      window.location.replace('https://8c34790a4315.ngrok.io/Register')
+      window.location.replace('https://36a4bd480251.ngrok.io/Register')
 
     }
 
@@ -63,7 +63,7 @@
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
       if (liff.isLoggedIn()) {
         //runApp()
-        //resp();
+        resp();
         user_id();
         
         
