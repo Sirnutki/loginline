@@ -37,8 +37,8 @@
         var user_id_line = profile.userId;
         axios.post('https://8c34790a4315.ngrok.io/user_id_line',{"line_id" : user_id_line })
         .then(function (response) {
-        //resp();
-        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+        resp();
+        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         //console.log(response);
       })
       .catch(function (error) {
