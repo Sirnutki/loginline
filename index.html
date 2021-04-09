@@ -36,7 +36,7 @@
 
     
 
-    function user_id() {
+    function user_id_line() {
         liff.getProfile().then(profile => {
         var user_id_line = profile.userId;
         axios.post('https://fd3bfd60ede4.ngrok.io/user_id_line',{"line_id" : user_id_line })
@@ -65,7 +65,7 @@
       if (liff.isLoggedIn()) {
         //runApp()
         //resp();
-        user_id();
+        user_id_line();
         //body();
         
         
