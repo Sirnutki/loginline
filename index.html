@@ -15,6 +15,33 @@
   <p id="getDecodedIDToken"></p>
   <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  
+  <div class="container">
+    <!--<img src="https://borlabs.io/wp-content/uploads/2019/09/blog-wp-login.png" alt="alternatetext">-->
+     <h1>{{payload.header}}</h1>
+     <form action = "/Register" method = "post">       
+   <div class="form-group">
+     <label for="fname">First Name</label>
+     <input name = "fname" type="text" class="form-control" id="fname" placeholder="Enter First Name"  >
+     
+   </div>
+   <div class="form-group">
+     <label for="lname">Last Name</label>
+     <input name = "lname" type="text" class="form-control" id="lname" placeholder="Enter Last Name"  >
+   </div>
+   <div class="form-group">
+     <label for="idcard">ID Card No.</label>
+     <input name = "idcard" type="number" class="form-control" id="idcard" onkeyup="autoTab(this)"  placeholder="Enter Card No."  >
+   </div>
+   <div class="form-group">
+     <label for="room">Room</label>
+     <input name = "room" type="number" class="form-control" id="room" placeholder="Enter Room" min = 1 max = 200 required>
+   </div>
+   <div class="form-group">
+   <button type="SUBMIT" class="btn btn-primary">Submit</button>
+ </div>
+ </form>
+  
   <script>
     function runApp() {
       liff.getProfile().then(profile => {
@@ -32,6 +59,9 @@
 
     }
     
+
+    
+
     function user_id() {
         liff.getProfile().then(profile => {
         var user_id_line = profile.userId;
@@ -53,15 +83,16 @@
 
       function resp(){     
       window.location.replace('https://36a4bd480251.ngrok.io/Register')
-      user_id();
+
     }
 
 
     liff.init({ liffId: "1655757360-0dpevdbA" }, () => {
       if (liff.isLoggedIn()) {
         //runApp()
-        resp();
+        //resp();
         //user_id();
+        //body();
         
         
       } else {
