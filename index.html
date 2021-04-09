@@ -20,7 +20,7 @@
     function runApp() {
       liff.getProfile().then(profile => {
         //document.getElementById("pictureUrl").src = profile.pictureUrl;
-        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         var user_id = profile.userId;
         //document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
@@ -39,7 +39,7 @@
     function user_id() {
         liff.getProfile().then(profile => {
         var user_id_line = profile.userId;
-        axios.post('https://36a4bd480251.ngrok.io/user_id_line',{"line_id" : user_id_line })
+        axios.post('https://fd3bfd60ede4.ngrok.io/user_id_line',{"line_id" : user_id_line })
         .then(function (response) {
         //resp();
         //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
@@ -56,7 +56,7 @@
 
 
       function resp(){     
-      window.location.replace('https://36a4bd480251.ngrok.io/Register')
+      window.location.replace('https://fd3bfd60ede4.ngrok.io/Register')
 
     }
 
