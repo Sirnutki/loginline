@@ -30,6 +30,7 @@
         .then(function (response) {
         //resp();
         document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+        liff.closeWindow()
         //console.log(response);
       })
       .catch(function (error) {
