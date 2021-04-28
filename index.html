@@ -19,27 +19,23 @@
     function runApp() {
       liff.getProfile().then(profile => {
         //document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         var user_id = profile.userId;
         //document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
         //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         //var text = {"line_id" : user_id };   
         //resp();
-        window.location.replace('https://4f257d4b2464.ngrok.io/Register')
         axios.post('https://4f257d4b2464.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
-        //resp();
-        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
-        
+        resp();
+        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId; 
         //console.log(response);
       })
       .catch(function (error) {
         //console.log(error);
       });
       }).catch(err => console.error(err));
-
-
     }
 
 
