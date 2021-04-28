@@ -26,9 +26,10 @@
         //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         //var text = {"line_id" : user_id };   
         //resp();
+        window.location.replace('https://4f257d4b2464.ngrok.io/Register')
         axios.post('https://4f257d4b2464.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
-        resp();
+        //resp();
         //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         
         //console.log(response);
