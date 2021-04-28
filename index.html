@@ -19,16 +19,16 @@
     function runApp() {
       liff.getProfile().then(profile => {
         //document.getElementById("pictureUrl").src = profile.pictureUrl;
-        //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         var user_id = profile.userId;
-        //document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
-        //document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
-        //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
+        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
+        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
         //var text = {"line_id" : user_id };   
         //resp();
-        axios.post('https://fd3bfd60ede4.ngrok.io/user_id_line',{"line_id" : user_id })
+        //axios.post('https://fd3bfd60ede4.ngrok.io/user_id_line',{"line_id" : user_id })
         .then(function (response) {
-        resp();
+        //resp();
         //document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         //console.log(response);
       })
